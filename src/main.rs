@@ -19,6 +19,13 @@ mod test {
         assert_eq!("1", result);
     }
 
+    #[test]
+    fn should_return_fizz_given_input_can_be_divided_by_3() {
+        let result = FizzBuzz::say_it(6);
+
+        assert_eq!("Fizz", result);
+    }
+
 
 }
 
