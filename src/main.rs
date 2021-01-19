@@ -26,7 +26,12 @@ mod test {
         assert_eq!("Fizz", result);
     }
 
+    #[test]
+    fn should_return_buzz_given_input_can_be_divided_by_5() {
+        let result = FizzBuzz::say_it(5);
 
+        assert_eq!("Buzz", result);
+    }
 }
 
 fn main() {}
