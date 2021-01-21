@@ -9,7 +9,7 @@ impl FizzBuzz {
         return input.to_string();
     }
 
-    fn divided_by357_new(input: u32) -> String {
+    fn divided_by357(input: u32) -> String {
         let mut result: String = String::from("");
         if input % 3 == 0{
             result.push_str("Fizz");
@@ -22,25 +22,6 @@ impl FizzBuzz {
         }
         return result;
 
-    }
-    fn divided_by357(input: u32) -> String {
-        let mut result: String = String::from("");
-        if input % 3 == 0 && input % 5 == 0 && input % 7 == 0 {
-            result = String::from("FizzBuzzWhizz");
-        } else if input % 5 == 0 && input % 7 == 0 {
-            result = String::from("BuzzWhizz");
-        } else if input % 3 == 0 && input % 7 == 0 {
-            result = String::from("FizzWhizz");
-        } else if input % 3 == 0 && input % 5 == 0 {
-            result = String::from("FizzBuzz");
-        } else if input % 3 == 0 {
-            result = String::from("Fizz");
-        } else if input % 5 == 0 {
-            result = String::from("Buzz");
-        } else if input % 7 == 0 {
-            result = String::from("Whizz");
-        }
-        return result;
     }
 }
 
