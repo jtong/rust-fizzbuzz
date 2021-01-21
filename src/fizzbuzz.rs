@@ -13,6 +13,9 @@ impl FizzBuzz {
         if input % 5 == 0 {
             return String::from("Buzz");
         }
+        if input % 7 ==0{
+            return String::from("Whizz");
+        }
         return input.to_string();
     }
 }

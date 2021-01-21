@@ -39,6 +39,15 @@ mod test {
 
         assert_eq!("FizzBuzz", result);
     }
+
+
+    #[test]
+    fn should_return_whizz_given_input_can_be_divided_by_7() {
+        let result = FizzBuzz::say_it(7);
+
+        assert_eq!("Whizz", result);
+    }
+
 }
 
 fn main() {}
