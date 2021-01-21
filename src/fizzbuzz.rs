@@ -2,6 +2,14 @@ pub struct FizzBuzz {}
 
 impl FizzBuzz {
     pub fn say_it(input: u32) -> String {
+        let result = FizzBuzz::divided_by357(input);
+        if result != "" {
+            return result;
+        }
+        return input.to_string();
+    }
+
+    fn divided_by357(input: u32) -> String {
         let mut result: String = String::from("");
         if input % 3 == 0 && input % 5 == 0 && input % 7 == 0 {
             result = String::from("FizzBuzzWhizz");
@@ -18,10 +26,7 @@ impl FizzBuzz {
         } else if input % 7 == 0 {
             result = String::from("Whizz");
         }
-        if result != ""{
-            return result;
-        }
-        return input.to_string();
+        return result;
     }
 }
 
