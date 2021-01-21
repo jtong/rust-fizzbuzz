@@ -32,6 +32,13 @@ mod test {
 
         assert_eq!("Buzz", result);
     }
+
+    #[test]
+    fn should_return_fizzbuzz_given_input_can_be_divided_by_3_and_5() {
+        let result = FizzBuzz::say_it(15);
+
+        assert_eq!("FizzBuzz", result);
+    }
 }
 
 fn main() {}
