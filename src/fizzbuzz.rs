@@ -1,29 +1,25 @@
-pub struct FizzBuzz {
-
-}
+pub struct FizzBuzz {}
 
 impl FizzBuzz {
     pub fn say_it(input: u32) -> String {
+        let mut result: String = String::from("");
         if input % 3 == 0 && input % 5 == 0 && input % 7 == 0 {
-            return String::from("FizzBuzzWhizz");
+            result = String::from("FizzBuzzWhizz");
+        } else if input % 5 == 0 && input % 7 == 0 {
+            result = String::from("BuzzWhizz");
+        } else if input % 3 == 0 && input % 7 == 0 {
+            result = String::from("FizzWhizz");
+        } else if input % 3 == 0 && input % 5 == 0 {
+            result = String::from("FizzBuzz");
+        } else if input % 3 == 0 {
+            result = String::from("Fizz");
+        } else if input % 5 == 0 {
+            result = String::from("Buzz");
+        } else if input % 7 == 0 {
+            result = String::from("Whizz");
         }
-        if input % 5 == 0 && input % 7 == 0 {
-            return String::from("BuzzWhizz");
-        }
-        if input % 3 == 0 && input % 7 == 0 {
-            return String::from("FizzWhizz");
-        }
-        if input % 3 == 0 && input % 5 == 0 {
-            return String::from("FizzBuzz");
-        }
-        if input % 3 == 0 {
-            return String::from("Fizz");
-        }
-        if input % 5 == 0 {
-            return String::from("Buzz");
-        }
-        if input % 7 ==0{
-            return String::from("Whizz");
+        if result != ""{
+            return result;
         }
         return input.to_string();
     }
