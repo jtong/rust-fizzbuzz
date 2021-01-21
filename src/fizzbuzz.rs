@@ -4,6 +4,9 @@ pub struct FizzBuzz {
 
 impl FizzBuzz {
     pub fn say_it(input: u32) -> String {
+        if input % 5 == 0 && input % 7 == 0 {
+            return String::from("BuzzWhizz");
+        }
         if input % 3 == 0 && input % 7 == 0 {
             return String::from("FizzWhizz");
         }
