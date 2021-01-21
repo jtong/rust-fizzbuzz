@@ -48,6 +48,14 @@ mod test {
         assert_eq!("Whizz", result);
     }
 
+    #[test]
+    fn should_return_fizz_whizz_given_input_can_be_divided_by_3_and_7() {
+        let result = FizzBuzz::say_it(21);
+
+        assert_eq!("FizzWhizz", result);
+    }
+
+
 }
 
 fn main() {}
